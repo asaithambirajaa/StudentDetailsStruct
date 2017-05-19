@@ -10,10 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var showResultLal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
+    @IBOutlet var label2: UILabel!
+    @IBOutlet var label1: UILabel!
+    @IBOutlet var label3: UILabel!
+    @IBOutlet var label4: UILabel!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -21,5 +26,14 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func getStudentDetails(_ sender: Any) {
+       // showResultLal.numberOfLines = names.count
+        //label1.numberOfLines = colleageNames.count
+        //showResultLal.text = names.joined(separator: "\n")
+        showResultLal.text = names.popLast()
+        label1.text = colleageNames.popLast()
+        label2.text = grades.popLast()
+        label3.text = regNO.popLast()
+        label4.text = marks.popLast()
+    }
 }
-
